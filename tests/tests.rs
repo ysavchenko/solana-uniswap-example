@@ -17,16 +17,10 @@ pub fn program_test() -> ProgramTest {
     );
 
     program_test.add_program(
-        "spl_token",
-        spl_token::id(),
-        processor!(spl_token::processor::Processor::process),
-    );
-
-    program_test.add_program(
         "spl_token_swap",
         spl_token_swap::id(),
-        processor!(spl_token_swap::processor::Processor::process),
-    );
+        None,
+    ); 
 
     program_test
 }
