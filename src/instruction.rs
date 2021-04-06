@@ -17,10 +17,7 @@ pub enum TemplateInstruction {
 }
 
 /// Create `Example` instruction
-pub fn init(
-    program_id: &Pubkey,
-    example_account: &Pubkey,
-) -> Result<Instruction, ProgramError> {
+pub fn init(program_id: &Pubkey, example_account: &Pubkey) -> Result<Instruction, ProgramError> {
     let init_data = TemplateInstruction::ExampleInstruction;
     let data = init_data
         .try_to_vec()
